@@ -115,9 +115,16 @@ Name | Repository
 [Battery Historian](https://github.com/google/battery-historian) | A tool to analyze battery consumers using Android "bugreport" files
 [TinyPNG](https://tinypng.com) | Optimize your images with a perfect balance in quality and file size
 
-## Tips
+### Mock
+- [Mockey](https://github.com/clafonta/Mockey) - A tool for testing application interactions over http, with a focus on testing web services, specifically web applications that consume XML, JSON, and HTML.
+- [JSON Placeholder](http://jsonplaceholder.typicode.com/) - Fake Online REST API for Testing and Prototyping
+- [API Studio](http://apistudio.io/) - a playground for API developers
+- [Mocky](http://www.mocky.io/) - Mock your HTTP responses to test your REST API
+- [Mockbin](http://mockbin.com) - Mockbin allows you to generate custom endpoints to test, mock, and track HTTP requests & responses between libraries, sockets and APIs.
 
-### Use shrinkResources
+## Gradle Tips
+
++ **Use shrinkResources**
   ```gradle
   android {
     ...
@@ -130,9 +137,6 @@ Name | Repository
     }
   }
   ```
-
-+ **[Simulating Android killing your app in the background](https://twitter.com/Jahnold/status/759775495655333888),  run in terminal**
-  `adb shell am kill`
 
 + **Split your apk using gradle when using Native code, do not bundle all of em together and ship!.. coz that will make you evil**
 
@@ -175,6 +179,7 @@ Name | Repository
   ```gradle
   ./gradlew --refresh-dependencies
   ```
+  
 + **To exclude a certain task from being run by gradle**
 
   Suppose you want to exclude the task `javaDoc` then use `-x` option followed by the task name, i.e `javaDoc` in this case.
@@ -218,8 +223,6 @@ Name | Repository
 
   Android uses Gradle as its build system, which actually allows one to make a lot of things easy by creating tasks to automate things.
   [This reddit post enlists a lot of such useful gradle scripts](https://www.reddit.com/r/androiddev/comments/3ig3gm/show_us_your_gradle_tasks)
-
-+ **[Use LeakCanary to detect memory leaks in your app](https://github.com/square/leakcanary)** - Its a memory leak detection library for Android and Java.
 
 + **Stop a running gradle build process**
 
@@ -519,161 +522,68 @@ Name | Repository
 + **[Use activity-alias or your launcher icons will disappear when renaming/moving your MainActivity](https://medium.com/@Mauin/the-case-of-disappearing-launcher-icons-657c3663b9d3)**
 
 
-[<p align="right">Back to Index</p>](#index)
-### ***Tips regarding UI/UX***
+## UI/UX
 
 
-+ **Motion**
-  + Material Design uses real-world metaphors as its foundation. Objects in the real world don't move linearly, they move in curved paths and accelerate and decelerate according to the motion's properties.
-  + As such, motion should also use such properties and animate objects so that the motion feels natural rather than forced
-  + For example, a car leaving the screen in a movie starts off slowly, then accelerates till it's out of the frame. Similarly, views should be interpolated using classes like AccelerateInterpolator, FastOutSlowInInterpolator, etc. [[More Info]](https://developer.android.com/reference/android/animation/TimeInterpolator.html)
+### Motion
+- Material Design uses real-world metaphors as its foundation. Objects in the real world don't move linearly, they move in curved paths and accelerate and decelerate according to the motion's properties.
+- As such, motion should also use such properties and animate objects so that the motion feels natural rather than forced
+- For example, a car leaving the screen in a movie starts off slowly, then accelerates till it's out of the frame. Similarly, views should be interpolated using classes like AccelerateInterpolator, FastOutSlowInInterpolator, etc. [[More Info]](https://developer.android.com/reference/android/animation/TimeInterpolator.html)
 
-+ **Typography**
-    +  While custom typefaces can be used for branding, it is essential to stick to Roboto and Noto if possible, especially for body text, due to their clarity and optimistic nature.
-    +  Roboto covers Latin, Greek and Cyrillic extended scripts, with Noto filling in for other language scripts [[More Info]](https://material.google.com/style/typography.html#)
-    +  Weight balancing is an important aspect of typography, the fundamental concept of which is that the larger a typeface is, the less its weight should be so that it doesn't appear too thick and balances its weight with smaller typefaces of higher weights
-    +  Typography should align to a 4dp baseline grid, and maintain a minimum contrast ratio of 4.5:1 based on luminance values, with a recommended ratio being 7:1.
-    +  The ideal reading length for large blocks of text is 40 to 60 characters per line. Anything less is too narrow and anything more is too wide.
+### Typography
+- While custom typefaces can be used for branding, it is essential to stick to Roboto and Noto if possible, especially for body text, due to their clarity and optimistic nature.
+- Roboto covers Latin, Greek and Cyrillic extended scripts, with Noto filling in for other language scripts [[More Info]](https://material.google.com/style/typography.html#)
+- Weight balancing is an important aspect of typography, the fundamental concept of which is that the larger a typeface is, the less its weight should be so that it doesn't appear too thick and balances its weight with smaller typefaces of higher weights
+- Typography should align to a 4dp baseline grid, and maintain a minimum contrast ratio of 4.5:1 based on luminance values, with a recommended ratio being 7:1.
+- The ideal reading length for large blocks of text is 40 to 60 characters per line. Anything less is too narrow and anything more is too wide.
 
+### Icons
+- Icons should be designed at 48dp, with 1dp edges, which equates to
+    - 48px by 48px at mdpi
+    - 72px by 72px at hdpi
+    - 96px by 96px at xhdpi
+    - 144px by 144px at xxhdpi
+    - 192px by 192px at xxxhdpi
+- An additional icon of 512px by 512px should be designed for use on Google Play
+- Material icons, in addition to the base icon, should contain the following important elements
+    - 1dp tinted edge at the top
+    - 1dp shaded edge at the bottom
+    - Contact shadow - a soft shadow around all edges of raised elements
+    - Finish - a soft tint to provide surface lighting, fading from upper life to lower right [[More Info]](https://material.google.com/style/icons.html#icons-product-icons)
 
-+ **Icons**
-    + Icons should be designed at 48dp, with 1dp edges, which equates to
-        +  48px by 48px at mdpi
-        +  72px by 72px at hdpi
-        +  96px by 96px at xhdpi
-        +  144px by 144px at xxhdpi
-        +  192px by 192px at xxxhdpi
-    + An additional icon of 512px by 512px should be designed for use on Google Play
-    + Material icons, in addition to the base icon, should contain the following important elements
-        + 1dp tinted edge at the top
-        + 1dp shaded edge at the bottom
-        + Contact shadow - a soft shadow around all edges of raised elements
-        + Finish - a soft tint to provide surface lighting, fading from upper life to lower right [[More Info]](https://material.google.com/style/icons.html#icons-product-icons)
+### Ripples
+- When implementing Ripple Effect use `?attr/selectableItemBackground` instead of `?android:attr` ([Ref](https://twitter.com/pareshmayani/status/772061422729637893))
+- When implementing Ripples contained within the view like Button, use ([Ref](https://twitter.com/pareshmayani/status/772268888931176448))
+```xml
+android:background="?attr/selectableItemBackground"
+```
+- When implementing Ripples that extend beyond the view's bounds like ImageView: ([Ref](https://twitter.com/pareshmayani/status/772269413290520576))
+```xml
+?attr/selectableItemBackgroundBorderless
+```
+    
+### Other
+- Views should be aligned to Material Design's 8dp baseline grid and the keylines when possible. This gives the UI a sense of structure and hierarchy. [[More Info]](https://material.google.com/layout/metrics-keylines.html)
+- If you plan on keeping a reference to any ViewGroup (LinearLayout, FrameLayout, RelativeLayout, etc.), and you don’t want to use any methods specific to this particular type of Layout, keep it as a ViewGroup object. [[More Info]](https://android.jlelse.eu/android-pro-tip-1-443f423b4de6#.pklc9djmc)
+- While picking an accent color (if the brand already has one), pick a color complementary to the primary color so that the contrast is high enough
 
-+ **Ripples**
-  + When implementing Ripple Effect use `?attr/selectableItemBackground` instead of `?android:attr` ([Ref](https://twitter.com/pareshmayani/status/772061422729637893))
-  + When implementing Ripples contained within the view like Button, use ([Ref](https://twitter.com/pareshmayani/status/772268888931176448))
+## About Me
+- Github:  https://github.com/thanhtoan1196
+- Facebook: https://www.facebook.com/thanhtoan1196       
+- Email: thanhtoan1196@gmail.com
 
-    ```xml
-    android:background="?attr/selectableItemBackground"
-    ```
-  + When implementing Ripples that extend beyond the view's bounds like ImageView: ([Ref](https://twitter.com/pareshmayani/status/772269413290520576))
+## License
 
-    ```xml
-    ?attr/selectableItemBackgroundBorderless
-    ```
+    Copyright 2017 Tran Van Thanh Toan
 
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-+ **Other Points to Note**
-  + Views should be aligned to Material Design's 8dp baseline grid and the keylines when possible. This gives the UI a sense of structure and hierarchy. [[More Info]](https://material.google.com/layout/metrics-keylines.html)
-  + If you plan on keeping a reference to any ViewGroup (LinearLayout, FrameLayout, RelativeLayout, etc.), and you don’t want to use any methods specific to this particular type of Layout, keep it as a ViewGroup object. [[More Info]](https://android.jlelse.eu/android-pro-tip-1-443f423b4de6#.pklc9djmc)
-  + While picking an accent color (if the brand already has one), pick a color complementary to the primary color so that the contrast is high enough
+        http://www.apache.org/licenses/LICENSE-2.0
 
-
-[<p align="right">Back to Index</p>](#index)
-### ***Tips if you use [Kotlin](https://kotlinlang.org/)***
-
-+ **Checkout [From Java to Kotlin](https://fabiomsr.github.io/from-java-to-kotlin/)**
-
-  Cheatsheet when you come from Java to Kotlin. Very nice resource to compare the two languages.
-
-
-
-[<p align="right">Back to Index</p>](#index)
-### ***Other Resources***
-
-+ [Adhere to the coding guidelines](https://github.com/ribot/android-guidelines/blob/master/project_and_code_guidelines.md)
-
-+ **Listen to podcasts**
-  1. [Fragmented](http://fragmentedpodcast.com/)
-  2. [Android Developers Backstage](https://androidbackstage.blogspot.in/)
-
-  There are others too, but the above two are the popular ones, you can lookup more using tag `android` on sites offering Podcast Services.
-
-  P.S : I use [Player.fm](https://player.fm/) to listen to these podcasts. They even have an [Android Client](https://play.google.com/store/apps/details?id=fm.player&hl=en), all for FREE.
-
-+ **Checkout [Android Dialogs](https://www.youtube.com/channel/UCMEmNnHT69aZuaOrE-dF6ug/feed)**
-  Short byte sized android interview videos with experts.
-
-+ **Checkout [CodePath Android Cliffnotes](https://guides.codepath.com/android)**
-
-   It is the central crowdsourced resource for complete and up-to-date practical Android developer guides for any topic.
-
-+ **[Take care about copyright](http://jeroenmols.com/blog/2016/08/03/copyright/)**
-
-+ **Checkout new android libraries**
-
-  [Android Arsenal](https://android-arsenal.com/) - Android developer portal with tools, libraries, and apps
-
-+ **Checkout android example apps**
-  + [Android Examples](https://github.com/nisrulz/android-examples) - Simple basic isolated apps, for budding android devs.
-  + [Google Samples](https://github.com/googlesamples) - Various sample apps provided by Google
-  + [Google Android Codelabs](https://codelabs.developers.google.com/?cat=Android)
-  + [Google Android Codelabs](https://codelabs.developers.google.com/?cat=Android)
-  + [QualityMatters](https://github.com/artem-zinnatullin/qualitymatters)
-  + [Android-Testing](https://github.com/googlesamples/android-testing)
-  + [Espresso-Samples](https://github.com/chiuki/espresso-samples)
-
-+ **[Read the Effective Java by Joshua Bloch](https://www.amazon.ca/Effective-Java-2nd-Joshua-Bloch/dp/0321356683)**
-  + [Cheatsheet/Summary](https://github.com/HugoMatilla/Effective-JAVA-Summary)
-
-+ **[Subscribe to Caster.io](https://caster.io/)**
-
-  Bite-sized Android development videos
-
-+ **Bookmark these sites for staying upto date**
-  + [Android Developers - Youtube Channel](https://www.youtube.com/user/androiddevelopers/videos)
-  + [Android Niceties - UI Showcase](http://androidniceties.tumblr.com/)
-  + [Material Design Specs](https://material.google.com/)
-  + [Everything About Material Design](https://material.io/)
-  + [Platform Version Distribution](https://developer.android.com/about/dashboards/index.html#Platform)
-  + [Android Studio Release Notes](https://sites.google.com/a/android.com/tools/recent)
-  + [Android Developers Blog](https://android-developers.blogspot.in/)
-  + [AndroidDev-Reddit](https://www.reddit.com/r/androiddev)
-  + [Github Trending Java Projects](https://github.com/trending?l=java&since=weekly)
-  + [Stackoverflow-Android tag](https://stackoverflow.com/questions/tagged/android)
-  + [Support Library History](https://developer.android.com/topic/libraries/support-library/revisions.html)
-  + [Android Conferences](https://androidstudygroup.github.io/conferences/)
-  + [Android Dev Docs](https://developer.android.com/reference/packages.html)
-  + [Material Up - DesignShowcase](http://www.material.uplabs.com/)
-  + [Dribbble - MaterialDeisgnShowcase](https://dribbble.com/tags/material_design)
-
-+ **[Checkout the Testing guide](https://github.com/ravidsrk/android-testing-guide)**
-
-+ **Use freely available mockable api points**
-  + [Mockey](https://github.com/clafonta/Mockey) - A tool for testing application interactions over http, with a focus on testing web services, specifically web applications that consume XML, JSON, and HTML.
-  + [JSON Placeholder](http://jsonplaceholder.typicode.com/) - Fake Online REST API for Testing and Prototyping
-  + [API Studio](http://apistudio.io/) - a playground for API developers
-  + [Mocky](http://www.mocky.io/) - Mock your HTTP responses to test your REST API
-  + [Mockbin](http://mockbin.com) - Mockbin allows you to generate custom endpoints to test, mock, and track HTTP requests & responses between libraries, sockets and APIs.
-
-+ **Subscribe to newsletters to stay upto date**
-  + [Android Weekly](http://androidweekly.net/) - Free newsletter that helps you to stay cutting-edge with your Android Development
-  + [AndroidDevDigest](https://www.androiddevdigest.com/) - A Handcrafted Weekly #AndroidDev Newsletter
-  + [Infinium #AndroidSweets](https://androidsweets.ongoodbits.com/) - Fresh news from Droid zone
-  + [Kotlin Weekly](http://us12.campaign-archive2.com/home/?u=f39692e245b94f7fb693b6d82&id=93b2272cb6) - Free newsletter to stay uptodate with Kotlin Development
-
-+ **[ADB/Fastboot Tools made available as a separate package by google](https://plus.google.com/+ElliottHughes/posts/U3B6H3Sejvv), download latest version for**
-  + [MacOSX](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip)
-  + [Linux](
-https://dl.google.com/android/repository/platform-tools-latest-linux.zip)
-  + [Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip)
-
-+ **Some other awesome utility tools**
-  + [Android SVG to VectorDrawable](https://inloop.github.io/svg2android/) - One VectorDrawable to rule all screen densities
-  + [SQLite Viewer](https://inloop.github.io/sqlite-viewer/) - View sqlite file online
-  + [Android 9-patch shadow generator](https://inloop.github.io/shadow4android/) - Tool that makes fully customizable shadows possible
-  + [APK method count](https://inloop.github.io/apk-method-count/) - Tool that outputs per-package method counts
-  + [Material Palette](https://www.materialpalette.com/) - Easily generate the color pallete based on material design
-  + [Color Tool](https://material.io/color/#!/) - Create, share and apply color palettes to your UI
-  + [Method Count](http://www.methodscount.com/) - Use this tool to avoid the dreaded 65K method limit of the DEX file format!
-  + [Gradle, please](https://gradleplease.appspot.com/) - Lookup dependency reference name to include as your gradle dependencies
-  + [jsonschema2pojo](http://www.jsonschema2pojo.org/) - Generate Plain Old Java Objects from JSON or JSON-Schema
-  + [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/) - A web-based set of tools for generating graphics and other assets that would eventually be in an Android application's res/ directory.
-  + [Device Art Generator](https://developer.android.com/distribute/tools/promote/device-art.html) - Quickly wrap app screenshots in device artwork
-  + [Google Translator Toolkit](https://translate.google.com/toolkit/list?hl=en#translations/) - Translate strings.xml files to any language and download as XML
-  + [ShapeShifter](https://alexjlockwood.github.io/ShapeShifter/) - SVG path morphing animation editor.
-  + [App Privacy Policy Generator](https://app-privacy-policy-generator.firebaseapp.com/) - Generate a generic privacy policy for your app for the playstore.
-  + [gnirehtet](https://github.com/Genymobile/gnirehtet) - Reverse tethering for Android.
-
-[<p align="right">Back to Index</p>](#index)
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
