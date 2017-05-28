@@ -9,16 +9,16 @@ A curated list of awesome Android Tips. Feel free to contrubute.
 
 ## Index
 
-* [Know Your Tools](#know-your-tools)
-    * [Android Studio](#android-studio)
-    * [Emulator](#emulator)
-    * [Vysor](#vysor)
-    * [DeskDock](#deskdock)
-* [Make better choices while coding](#make-better-choices-while-coding)
-* [Tips regarding UI/UX](#tips-regarding-uiux)
-* [Tips if you use Kotlin](#tips-if-you-use-kotlin)
-* [Extra : Android Libraries built by me](#extra--android-libraries-built-by-me)
-* [Translations](#translations)
+* [Android Studio](#android-studio)
+    * [Keyboard shortcuts](#keyboard-shortcuts)
+    * [Gradle](#gradle-plugin)
+    * [Plugins](#plugins)
+    * [Live Templates](#live-templates)
+    * [Postfix code completion](#postfix-code-completion)
+* [Tools](#tools)
+* [Gradle](#gradle)
+* [UI/UX](#uiux)
+* [About Me](#about-me)
 
 ## Android Studio
 
@@ -34,13 +34,6 @@ A curated list of awesome Android Tips. Feel free to contrubute.
   |Open Symbol                                                                      |<kbd>Cmd</kbd>&nbsp;<kbd>Opt</kbd>&nbsp;<kbd>O</kbd>                   |<kbd>Alt</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>N</kbd>
 
   **Complete Keymap Guide :  [MacOSX](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard_mac.pdf) | [Linux/Win](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard.pdf)**
-
-### Gradle
-Name | Description
---- | ---
-[gradle-play-publisher](https://github.com/Triple-T/gradle-play-publisher) | Gradle Plugin to upload your APK and metadata to the Google Play Store
-[dexcount-gradle-plugin](https://github.com/KeepSafe/dexcount-gradle-plugin) | A Gradle plugin to report the number of method references in your APK on every build
-[maven-android-sdk-deployer](https://github.com/simpligility/maven-android-sdk-deployer) | A tool to install components of the Android SDK into a Maven repository or repository manager to use with the Android Maven Plugin, Gradle and other tools
 
 ### Plugins
 Name | Description
@@ -66,7 +59,7 @@ Name | Description
 [gradle-retrolambda](https://github.com/evant/gradle-retrolambda) | A gradle plugin for getting java lambda support in java 6, 7 and android
 [idea-gitignore](https://github.com/hsz/idea-gitignore) | .ignore support plugin for IntelliJ IDEA
 [checkstyle-idea](https://github.com/jshiell/checkstyle-idea) | CheckStyle plug-in for IntelliJ IDEA
-[permissions-dispatcher-plugin](https://github.com/shiraji/permissions-dispatcher-plugin) | IntelliJ plugin for supporting PermissionsDispatcher
+**[permissions-dispatcher-plugin](https://github.com/shiraji/permissions-dispatcher-plugin)** | IntelliJ plugin for supporting PermissionsDispatcher
 [jetbrains-wakatime](https://github.com/wakatime/jetbrains-wakatime) | IntelliJ IDEA, PyCharm, RubyMine, PhpStorm, AppCode, AndroidStudio, Gogland, Rider, & WebStorm plugin for quantifying your coding
 [AndroidWiFiADB](https://github.com/pedrovgs/AndroidWiFiADB) | ntelliJ/AndroidStudio plugin which provides a button to connect your Android device over WiFi to install, run and debug your applications without a USB connected
 [AndroidLocalizationer](https://github.com/westlinkin/AndroidLocalizationer) | This is a Android Studio/ IntelliJ IDEA plugin to localize your Android app, translate your string resources automactically 
@@ -74,6 +67,13 @@ Name | Description
 [String Manipulation](https://plugins.jetbrains.com/plugin/2162) | Provides actions for text manipulation such as Toggle case, encode/decode, sorting
 [Sonar Lint](https://plugins.jetbrains.com/plugin/7973) | The plugin that provides on-the-fly feedback to developers on new bugs and quality issues injected into Java, JavaScript and PHP code
 [Exynap](https://plugins.jetbrains.com/androidstudio/plugin/8600-exynap) | The plugin which helps you find and implement the code you require in an instant
+
+### Gradle Plugin
+Name | Description
+--- | ---
+[gradle-play-publisher](https://github.com/Triple-T/gradle-play-publisher) | Gradle Plugin to upload your APK and metadata to the Google Play Store
+[dexcount-gradle-plugin](https://github.com/KeepSafe/dexcount-gradle-plugin) | A Gradle plugin to report the number of method references in your APK on every build
+[maven-android-sdk-deployer](https://github.com/simpligility/maven-android-sdk-deployer) | A tool to install components of the Android SDK into a Maven repository or repository manager to use with the Android Maven Plugin, Gradle and other tools
 
 ### Live Templates
   + `newInstance` - Generates the static `newInstance` function inside a Fragment
@@ -101,7 +101,7 @@ Name | Description
 ## Tools
 Name | Repository
 --- | ---
-[Vysor](http://www.vysor.io/) | This one needs special mention due to how useful it is. It basically is a window to your device i.e it streams and allows you to interact with your physical device on your laptop. Very useful when you are demoing your app during a presentation. You can interact with your physical device and it will be shown right in your laptop screen. It has a paid/free version, paid version is totally worth buying
+**[Vysor](http://www.vysor.io/)** | This one needs special mention due to how useful it is. It basically is a window to your device i.e it streams and allows you to interact with your physical device on your laptop. Very useful when you are demoing your app during a presentation. You can interact with your physical device and it will be shown right in your laptop screen. It has a paid/free version, paid version is totally worth buying
 [DeskDock](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free) | It enables you to control your Android device as if it was part of your desktop computer
 [simplify](https://github.com/CalebFenton/simplify) | Generic Android Deobfuscator
 [jadx](https://github.com/skylot/jadx) | Dex to Java decompiler
@@ -122,7 +122,7 @@ Name | Repository
 - [Mocky](http://www.mocky.io/) - Mock your HTTP responses to test your REST API
 - [Mockbin](http://mockbin.com) - Mockbin allows you to generate custom endpoints to test, mock, and track HTTP requests & responses between libraries, sockets and APIs.
 
-## Gradle Tips
+## Gradle
 
 + **Use shrinkResources**
   ```gradle
