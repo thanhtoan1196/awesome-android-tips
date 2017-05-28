@@ -1,4 +1,11 @@
-![Image](img/github_banner.png)
+List of Android Tips [![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/thanhtoan1196/awesome-android)
+======================
+A curated list of awesome Android Tips. Feel free to contrubute.
+
+## Other Awesome List
+- [awesome-android](https://github.com/thanhtoan1196/awesome-android)
+- [awesome-android-ui](https://github.com/thanhtoan1196/awesome-android-ui)
+- [awesome-android-libraries](https://github.com/thanhtoan1196/awesome-android-libraries)
 
 ## Index
 
@@ -13,56 +20,72 @@
 * [Extra : Android Libraries built by me](#extra--android-libraries-built-by-me)
 * [Translations](#translations)
 
-### ***Know Your Tools***
-#### ***Android Studio***
+## Android Studio
 
-+ **Code faster by using keyboard shortcuts**
+### Keyboard shortcuts
 
   |Description                                                                      |Mac                                                        |Linux/Win
   |---------------------------------------------------------------------------------|-----------------------------------------------------------|----------------------------
   |Open recently edited file                                                        |<kbd>Cmd</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>E</kbd>                 |<kbd>Ctrl</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>E</kbd>
   |Last Edited Location                                                             |<kbd>Cmd</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>Backspace</kbd>         |<kbd>Ctrl</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>Backspace</kbd>
-  |Refactor This                                                                    |<kbd>Ctrl</kbd>&nbsp;<kbd>T</kbd>                                |<kbd>Ctrl</kbd>&nbsp;<kbd>Alt</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>T</kbd>
-  |[Multicursor Selection](https://android.jlelse.eu/ctrl-g-d94c88cd4475#.55flqgkb3)|<kbd>Ctrl</kbd>&nbsp;<kbd>G</kbd>                                |<kbd>Alt</kbd>&nbsp;<kbd>J</kbd>
+  |Refactor This                                                                    |<kbd>Ctrl</kbd>&nbsp;<kbd>T</kbd>                                      |<kbd>Ctrl</kbd>&nbsp;<kbd>Alt</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>T</kbd>
+  |Multicursor Selection                                                            |<kbd>Ctrl</kbd>&nbsp;<kbd>G</kbd>                                      |<kbd>Alt</kbd>&nbsp;<kbd>J</kbd>
   |Lookup IDE commands / Actions                                                    |<kbd>Cmd</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>A</kbd>                 |<kbd>Ctrl</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>A</kbd>
   |Open Symbol                                                                      |<kbd>Cmd</kbd>&nbsp;<kbd>Opt</kbd>&nbsp;<kbd>O</kbd>                   |<kbd>Alt</kbd>&nbsp;<kbd>Shift</kbd>&nbsp;<kbd>N</kbd>
 
   **Complete Keymap Guide :  [MacOSX](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard_mac.pdf) | [Linux/Win](https://resources.jetbrains.com/assets/products/intellij-idea/IntelliJIDEA_ReferenceCard.pdf)**
 
-+ **Use plugins to become more efficient**
-  1. [KeyPromoter](https://plugins.jetbrains.com/plugin/4455)
+### Gradle
+Name | Description
+--- | ---
+[gradle-play-publisher](https://github.com/Triple-T/gradle-play-publisher) | Gradle Plugin to upload your APK and metadata to the Google Play Store
+[dexcount-gradle-plugin](https://github.com/KeepSafe/dexcount-gradle-plugin) | A Gradle plugin to report the number of method references in your APK on every build
+[maven-android-sdk-deployer](https://github.com/simpligility/maven-android-sdk-deployer) | A tool to install components of the Android SDK into a Maven repository or repository manager to use with the Android Maven Plugin, Gradle and other tools
 
-      The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used, if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time. It also has some useful features, like it will prompt you to create a key binding for a command whenever an action does not have a key binding and you have used it 3 times using your cursor.
-  1. [String Manipulation](https://plugins.jetbrains.com/plugin/2162)
+### Plugins
+Name | Description
+--- | ---
+[android-xml-sorter](https://github.com/roana0229/android-xml-sorter) | Android Studio & IntelliJ Plugin for sort xml by name="xxx"
+[android-material-design-icon-generator-plugin](https://github.com/konifar/android-material-design-icon-generator-plugin) | This plugin help you to set material design icon to your project 
+[android-selector-chapek](https://github.com/inmite/android-selector-chapek) | Android Studio plugin which automatically generates drawable selectors from appropriately named resources
+[android-parcelable-intellij-plugin](https://github.com/mcharmas/android-parcelable-intellij-plugin) | IntelliJ Plugin for Android Parcelable boilerplate code generation 
+[adb-idea](https://github.com/pbreault/adb-idea) |  Plugin for Android Studio and Intellij IDEA that speeds up your day to day android development 
+[android-butterknife-zelezny](https://github.com/avast/android-butterknife-zelezny) | Android Studio plug-in for generating ButterKnife injections from selected layout XML 
+[GsonFormat](https://github.com/zzz40500/GsonFormat) | This is a plugin you can generate Json model from Json String
+[CodeGlance](https://github.com/Vektah/CodeGlance) | Intelij IDEA plugin for displaying a code mini-map similar to the one found in Sublime
+[ADBWIFI](https://github.com/layerlre/ADBWIFI) | ADBWIFI Android Studio plugin for debug android app over Wi-Fi 
+[android-styler](https://github.com/alexzaitsev/android-styler) | Android Studio / IDEA plugin that helps to create styles 
+[android-drawable-importer-intellij-plugin](https://github.com/winterDroid/android-drawable-importer-intellij-plugin) | Adds an option to IntelliJ to import drawables in different resolutions from AndroidIcons, own "drawable repos" and scale a certain image down/up to the defined resolutions 
+[genymotion](https://plugins.jetbrains.com/plugin/7269-genymotion) | This plugin allows you to create and start Genymotion virtual devices from Android Studio 
+[dagger-intellij-plugin](https://github.com/square/dagger-intellij-plugin) | An IntelliJ IDEA plugin for Dagger which provides insight into how injections and providers are used
+[gradle-dependencies-helper](https://plugins.jetbrains.com/plugin/7299-gradle-dependencies-helper) | library is searched in Smart Code Completion by Maven repository 
+[AndroidProguardPlugin](https://github.com/zhonghanwen/AndroidProguardPlugin) | Android Studio generate proguard codes
+[idea-markdown](https://github.com/nicoulaj/idea-markdown) | Markdown language support for IntelliJ IDEA
+[idea-multimarkdown](https://github.com/vsch/idea-multimarkdown) | Markdown language support for IntelliJ IDEA
+[folding-plugin](https://github.com/dmytrodanylyk/folding-plugin) | Android File Grouping Plugin
+[gradle-retrolambda](https://github.com/evant/gradle-retrolambda) | A gradle plugin for getting java lambda support in java 6, 7 and android
+[idea-gitignore](https://github.com/hsz/idea-gitignore) | .ignore support plugin for IntelliJ IDEA
+[checkstyle-idea](https://github.com/jshiell/checkstyle-idea) | CheckStyle plug-in for IntelliJ IDEA
+[permissions-dispatcher-plugin](https://github.com/shiraji/permissions-dispatcher-plugin) | IntelliJ plugin for supporting PermissionsDispatcher
+[jetbrains-wakatime](https://github.com/wakatime/jetbrains-wakatime) | IntelliJ IDEA, PyCharm, RubyMine, PhpStorm, AppCode, AndroidStudio, Gogland, Rider, & WebStorm plugin for quantifying your coding
+[AndroidWiFiADB](https://github.com/pedrovgs/AndroidWiFiADB) | ntelliJ/AndroidStudio plugin which provides a button to connect your Android device over WiFi to install, run and debug your applications without a USB connected
+[AndroidLocalizationer](https://github.com/westlinkin/AndroidLocalizationer) | This is a Android Studio/ IntelliJ IDEA plugin to localize your Android app, translate your string resources automactically 
+[KeyPromoter](https://plugins.jetbrains.com/plugin/4455) | The plugin basically will annoy the hell out of you by showing you a big screen overlay with the key combination you should have used, if you used your mouse to execute some command to a level when you basically would start using the key combination just to avoid KeyPromoter annoying you all the time. It also has some useful features, like it will prompt you to create a key binding for a command whenever an action does not have a key binding and you have used it 3 times using your cursor
+[String Manipulation](https://plugins.jetbrains.com/plugin/2162) | Provides actions for text manipulation such as Toggle case, encode/decode, sorting
+[Sonar Lint](https://plugins.jetbrains.com/plugin/7973) | The plugin that provides on-the-fly feedback to developers on new bugs and quality issues injected into Java, JavaScript and PHP code
+[Exynap](https://plugins.jetbrains.com/androidstudio/plugin/8600-exynap) | The plugin which helps you find and implement the code you require in an instant
 
-      Provides actions for text manipulation such as Toggle case, encode/decode, sorting,
-  1. [Sonar Lint](https://plugins.jetbrains.com/plugin/7973)
-
-      The plugin that provides on-the-fly feedback to developers on new bugs and quality issues injected into Java, JavaScript and PHP code.
-  1. [ADB Idea](https://plugins.jetbrains.com/plugin/7380)
-
-      The plugin that adds ADB commands to Android Studio and IntelliJ such as ADB Uninstall App, ADB Kill App, ADB Restart App, etc
-  1. [Exynap](https://plugins.jetbrains.com/androidstudio/plugin/8600-exynap)
-
-      The plugin which helps you find and implement the code you require in an instant.
-  1. [Dagger IntelliJ Plugin](https://github.com/square/dagger-intellij-plugin)
-
-      The Dagger IntelliJ plugin creates visual connections between a @Inject object and the @Provides method that creates it.
-
-+ **Use Live Templates in Android Studio**
+### Live Templates
   + `newInstance` - Generates the static `newInstance` function inside a Fragment
   + `const` - Define a android style int constant
   + `psf` - public static final
   + `visible` - Set view visibility to VISIBLE
   + `gone` - Set view visibility to GONE
   + `noInstance` - private empty constructor to prohibit instance creation
-
-
-  [Comprehensive list of all Live Templates in Android Studio](https://github.com/keyboardsurfer/idea-live-templates)
-
-
-
-+ **Postfix code completion in Android Studio**
+  
+  Comprehensive list of all Live Templates: **[https://github.com/keyboardsurfer/idea-live-templates](https://github.com/keyboardsurfer/idea-live-templates)**
+  
+### Postfix code completion
 
   Android Studio/IntelliJ havea special kind of code completion which allows you to write code specific to a field
   + `<expr>.null` will auto complete to `if(<expr> == null)`
@@ -73,36 +96,28 @@
   + `<ArrayExpr>.fori` will auto complete to `for(int i = 0; i < <Arrayexpr>.length; i++)`
   + `<ArrayExpr>.forr` will auto complete to `for(int i = <Arrayexpr>.length - 1; i > 0 ; i--)`
 
-  Complete list of available postfix code completion can be found at **Settings → Editor → Postfix Templates**
+  Complete list of available postfix code completion can be found at: **Settings → Editor → Postfix Templates**
+  
+## Tools
+Name | Repository
+--- | ---
+[Vysor](http://www.vysor.io/) | This one needs special mention due to how useful it is. It basically is a window to your device i.e it streams and allows you to interact with your physical device on your laptop. Very useful when you are demoing your app during a presentation. You can interact with your physical device and it will be shown right in your laptop screen. It has a paid/free version, paid version is totally worth buying
+[DeskDock](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free) | It enables you to control your Android device as if it was part of your desktop computer
+[simplify](https://github.com/CalebFenton/simplify) | Generic Android Deobfuscator
+[jadx](https://github.com/skylot/jadx) | Dex to Java decompiler
+[apk2gold](https://github.com/lxdvs/apk2gold) | CLI tool for decompiling Android apps to Java. It does resources! It does Java! Its real easy!
+[procyon](https://bitbucket.org/mstrobel/procyon) | Procyon is a suite of Java metaprogramming tools focused on code generation and analysis
+[classyshark.com](http://classyshark.com/) |  handy Android and Java executables viewer
+[backdoor-apk](https://github.com/dana-at-cp/backdoor-apk) | backdoor-apk is a shell script that simplifies the process of adding a backdoor to any Android APK file. Users of this shell script should have working knowledge of Linux, Bash, Metasploit, Apktool, the Android SDK, smali, etc. This shell script is provided as-is without warranty of any kind and is intended for educational purposes only
+[enjarify](https://github.com/Storyyeller/enjarify) | Enjarify is a tool for translating Dalvik bytecode to equivalent Java bytecode. This allows Java analysis tools to analyze Android applications
+[dexterity](https://github.com/rchiossi/dexterity) | Dex manipulation library
+[android-classyshark](https://github.com/google/android-classyshark) | Executables (apk, multi-dex, jar) browser for Android, Java and Kotlin
+[Battery Historian](https://github.com/google/battery-historian) | A tool to analyze battery consumers using Android "bugreport" files
+[TinyPNG](https://tinypng.com) | Optimize your images with a perfect balance in quality and file size
 
-#### ***[Vysor](http://www.vysor.io/)***
-This one needs special mention due to how useful it is. It basically is a window to your device i.e it streams and allows you to interact with your physical device on your laptop. Very useful when you are demoing your app during a presentation. You can interact with your physical device and it will be shown right in your laptop screen. It has a paid/free version, paid version is totally worth buying.
+## Tips
 
-[<p align="right">Back to Index</p>](#index)
-#### ***[DeskDock](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free)***
-Yes, vysor was great, but if you want to share your keyboard and mouse directly to your Android device, then this app is for you. It enables you to control your Android device as if it was part of your desktop computer. The [FREE version](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.free) includes the use of computer mouse, while the [PRO version](https://play.google.com/store/apps/details?id=com.floriandraschbacher.deskdock.pro) includes features such as use of keyboard. This is useful where you can test your app without your hands ever leaving your keyboard.
-
-[<p align="right">Back to Index</p>](#index)
-### ***Make better choices while coding***
-
-+ **Use [ClassyShark](https://github.com/google/android-classyshark)**
-
-  It is a standalone tool for Android Devs used to browse any Android executable and show important info such as class interfaces and members, dex counts and dependencies
-
-+ **Use [Stetho](https://github.com/facebook/stetho)**
-
-  Debug your android apps using Chrome Dev Tools. Includes tools like Network Monitor, Shared Preference explorer etc.
-
-+ **Use [Battery Historian](https://github.com/google/battery-historian)**
-
-  A tool to analyze battery consumers using Android "bugreport" files.
-
-+ **Use Vectors instead of PNG**
-
-  If you do **have** to use png, compress them. Take a look at [TinyPNG](https://tinypng.com).
-
-+ **Use shrinkResources**
-
+### Use shrinkResources
   ```gradle
   android {
     ...
