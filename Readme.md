@@ -41,6 +41,7 @@ Name | Description
 [android-xml-sorter](https://github.com/roana0229/android-xml-sorter) | Android Studio & IntelliJ Plugin for sort xml by name="xxx"
 [android-material-design-icon-generator-plugin](https://github.com/konifar/android-material-design-icon-generator-plugin) | This plugin help you to set material design icon to your project 
 [android-selector-chapek](https://github.com/inmite/android-selector-chapek) | Android Studio plugin which automatically generates drawable selectors from appropriately named resources
+[android-selector-intellij-plugin](https://github.com/importre/android-selector-intellij-plugin) | Generate selectors for background drawable
 [android-parcelable-intellij-plugin](https://github.com/mcharmas/android-parcelable-intellij-plugin) | IntelliJ Plugin for Android Parcelable boilerplate code generation 
 [adb-idea](https://github.com/pbreault/adb-idea) |  Plugin for Android Studio and Intellij IDEA that speeds up your day to day android development 
 [android-butterknife-zelezny](https://github.com/avast/android-butterknife-zelezny) | Android Studio plug-in for generating ButterKnife injections from selected layout XML 
