@@ -75,6 +75,9 @@ Name | Description
 [gradle-play-publisher](https://github.com/Triple-T/gradle-play-publisher) | Gradle Plugin to upload your APK and metadata to the Google Play Store
 [dexcount-gradle-plugin](https://github.com/KeepSafe/dexcount-gradle-plugin) | A Gradle plugin to report the number of method references in your APK on every build
 [maven-android-sdk-deployer](https://github.com/simpligility/maven-android-sdk-deployer) | A tool to install components of the Android SDK into a Maven repository or repository manager to use with the Android Maven Plugin, Gradle and other tools
+[gradle-versions-plugin](https://github.com/ben-manes/gradle-versions-plugin) | Gradle plugin to discover dependency updates
+[bintray-release](https://github.com/novoda/bintray-release) | A helper for releasing from gradle up to bintray
+[ViewInspector](https://github.com/xfumihiro/ViewInspector) | View Inspection Toolbar for Android Development
 
 ### Live Templates
   + `newInstance` - Generates the static `newInstance` function inside a Fragment
